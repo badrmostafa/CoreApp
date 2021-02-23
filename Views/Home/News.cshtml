@@ -1,0 +1,36 @@
+﻿@model IEnumerable<News>
+@{
+    News news = new News();
+
+}    
+ <!-- ======= News Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>@ViewData["categoryName"] News</h2>
+        </div>
+
+
+            <div class="row">
+                @foreach (News item in Model)
+                {
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="~/assets/img/gallery/@item.Image" style="width:145px; height:145px;" class="img-fluid" alt="">
+                        <hr />
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                        <h3>@item.Title</h3>
+                        <h6>@item.Date</h6>
+                        <p class="font-italic">
+                            @item.Topic
+                        </p>
+                        <a class="btn btn-danger" href="/Home/Delete/@item.Id">Delete</a>
+                        <hr />
+                    </div>
+
+                }
+            </div>
+      
+            </div>
+</section><!-- End News Section -->

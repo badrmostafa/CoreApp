@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<ContactUs>
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Show Messages</h2>
+        </div>
+
+        
+        <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="100">
+            @foreach (ContactUs contacts in Model)
+            {
+                <div class="testimonial-item">
+                    <h5>@contacts.Subject</h5>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        @contacts.Message
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <h3>@contacts.Name</h3>
+                    <h4>@contacts.Email</h4>
+                </div>
+            }
+            </div>
+        
+
+    </div>
+</section><!-- End Testimonials Section -->
