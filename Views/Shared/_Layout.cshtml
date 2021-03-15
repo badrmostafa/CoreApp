@@ -65,28 +65,28 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    
-                        <li class="active"><a href="/Home/Index">Home</a></li>
-                        <li><a href="/Home/Message">Show Messages</a></li>
-                        <li><a href="/Team/Index">TeamMembers</a></li>
-                        <li><a href="/Home/Contact">Contacts</a></li>
 
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li><a href="/News/Index">News</a></li>
-                            <li><a href="/Categories/Index">Categories</a></li>
-                            <li><a href="/ContactUs/Index">ContactUs</a></li>
-                            <li><a href="/TeamMembers/Index">TeamMembers</a></li>
+                    <li class="active"><a href="/Home/Index">Home</a></li>
+                    <li><a href="/Home/Message">Show Messages</a></li>
+                    <li><a href="/Team/Index">TeamMembers</a></li>
+                    <li><a href="/Home/Contact">Contacts</a></li>
 
-                        }
+                    @*@if (User.IsInRole("Admin"))
+                    {
 
+                    }*@
 
-                    
+                    <li><a href="/News/Index">News</a></li>
+                    <li><a href="/Categories/Index">Categories</a></li>
+                    <li><a href="/ContactUs/Index">ContactUs</a></li>
+                    <li><a href="/TeamMembers/Index">TeamMembers</a></li>
 
 
 
 
-                    <partial name="_LoginPartial" />
+
+
+                    @*<partial name="_LoginPartial" />*@
 
                     <!-- <li class="drop-down"><a href="">Drop Down</a>
       <ul>
